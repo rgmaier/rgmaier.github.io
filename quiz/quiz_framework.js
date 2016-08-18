@@ -1,5 +1,5 @@
 //Questions per Level are set here, standard is 5
-var questionsLevel = 2;
+var questionsLevel = 3;
 
 //Max. level is set here, standard is 5 (starts at 0)
 var maxLevel = 0;
