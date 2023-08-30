@@ -27,6 +27,7 @@ body{
 .updated{
 	text-align: right;
 	font-size: 2em;
+	font-weight: bold;
 }
 .static{
 }
