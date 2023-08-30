@@ -16,8 +16,8 @@ body{
 	left: 50%;
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
-
-	width: 12em;
+	background-color:blue;
+	width: 80%;
 	min-height: 40%;
 }
 .box{
@@ -27,9 +27,7 @@ body{
 	
 	margin: 1em auto 1em;
 	
-	max-width: 50%;
-	width: 7em;
-	height: 100px;
+	
 }
 
 .content{
@@ -37,6 +35,10 @@ body{
 
 	border-radius: 15px;
 	opacity: 0.8;
+	
+	max-width: 50%;
+	width: 7em;
+	height: 100px;
 }
 
 .innercontent{
