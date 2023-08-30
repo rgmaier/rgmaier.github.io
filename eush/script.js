@@ -58,10 +58,10 @@ function bgupdate(initialStart, end){
 }
 
 window.onload = function () {
-	var end = new Date(2023, 7, 29, 22, 6, 0);
-	var initialStart = new Date(2023,7,29,22,4);
+	var end = new Date(2023, 7, 30, 22, 0, 0);
+	var initialStart = new Date(2023,7,30,21,0);
 	bgupdate(initialStart,end)
-	setInterval(function(){bgupdate(initialStart,end);},1500);
+	setInterval(function(){bgupdate(initialStart,end);},10000);
     calculate(end);
     time_remaining(end);
 };
