@@ -16,7 +16,6 @@ body{
 	left: 50%;
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
-	background-color:blue;
 	width: 80%;
 	min-height: 40%;
 }
