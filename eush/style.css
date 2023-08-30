@@ -56,11 +56,16 @@ body{
 
 #header{
 	color: white;
-	font-weight: bold;
 	font-size: 14pt;
+	font-weight: bold;
 }
 
 #footer{
 	color:white;
 	font-size: 10pt;
+}
+
+#tick{
+	font-size: 12pt;
+	font-weight: normal;
 }
