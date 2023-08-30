@@ -40,19 +40,12 @@ function bgupdate(initialStart, end){
 	var currentDuration = (end-current);
 	var iteration = initialDuration/24;
 	var counter = Math.ceil((initialDuration-currentDuration)/iteration);
-	console.log("Initial duration: " + initialDuration);
-	console.log("Current Duration: " + currentDuration);
-	console.log("iteration: " + iteration);
-	console.log("Counter: " + counter);
 	if(current < initialStart){
-		console.log("1");
 		document.body.style.backgroundImage = "url('1.png')"; 
 	}else if(current > end){
-		console.log("25");
 		document.body.style.backgroundImage = "url('25.png')"; 
 	}
 	else{
-		console.log(counter+1);
 		document.body.style.backgroundImage = "url('"+(counter+1)+".png')"; 
 	}
 }
