@@ -32,12 +32,12 @@ body{
 .content{
 	background-color: white;
 
-	border-radius: 15px;
+	border-radius: 4vw;
 	opacity: 0.8;
 	
 	max-width: 50%;
-	width: 7em;
-	height: 100px;
+	width: 40%;
+	height: 12vh;
 }
 
 .innercontent{
@@ -48,23 +48,29 @@ body{
 
 .updated{
 	font-size: 22pt;
+	font-size: 11vw;
 	font-weight: bold;
 }
 .static{
+	font-size: 12pt;
+	font-size: 5vw;
 }
 
 #header{
 	color: white;
-	font-size: 14pt;
+	font-size: 16pt;
+	font-size: 8vw;
 	font-weight: bold;
 }
 
 #footer{
 	color:white;
-	font-size: 10pt;
+	font-size: 12pt;
+	font-size: 5vw;
 }
 
 #tick{
 	font-size: 12pt;
+	font-size: 5vw;
 	font-weight: normal;
 }
