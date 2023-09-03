@@ -51,8 +51,8 @@ function bgupdate(initialStart, end){
 }
 
 window.onload = function () {
-	var end = new Date(2023, 7, 31, 21, 0, 0);
-	var initialStart = new Date(2023,7,30,21,0);
+	var end = new Date(2023, 8, 13, 21, 0, 0);
+	var initialStart = new Date(2023,8,3,19,0);
 	bgupdate(initialStart,end)
 	setInterval(function(){bgupdate(initialStart,end);},10000);
     calculate(end);
