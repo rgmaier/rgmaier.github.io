@@ -41,20 +41,24 @@ function bgupdate(initialStart, end){
 	var iteration = initialDuration/24;
 	var counter = Math.ceil((initialDuration-currentDuration)/iteration);
 	if(current < initialStart){
-		document.body.style.backgroundImage = "url('1.png')"; 
+		document.getElementById("main").style.backgrooundImage = "url('1.png')"
+		document.getElementById("main").style.cssText = 'background-image: url("1.png"); background-size: cover;'
 	}else if(current > end){
-		document.body.style.backgroundImage = "url('25.png')"; 
+		document.getElementById("main").style.backgrooundImage = "url('25.png')"
+		document.getElementById("main").style.cssText = 'background-image: url("25.png"); background-size: cover;'
 	}
 	else{
-		document.body.style.backgroundImage = "url('"+(counter+1)+".png')"; 
+		document.getElementById("main").style.backgrooundImage = "url('"+(counter+1)+".png')"
+		document.getElementById("main").style.cssText = 'background-image: url("'+(counter+1)+'.png"); background-size: cover;'
 	}
 }
 
 window.onload = function () {
-	var end = new Date(2023, 8, 13, 21, 0, 0);
-	var initialStart = new Date(2023,8,3,19,0);
+	var end = new Date(2023, 8, 10, 21, 0, 0);
+	var initialStart = new Date(2023,8,5,20,0);
 	bgupdate(initialStart,end)
 	setInterval(function(){bgupdate(initialStart,end);},10000);
     calculate(end);
     time_remaining(end);
+	
 };
