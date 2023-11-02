@@ -1,0 +1,14 @@
+.masthead {
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('SiRo_Wedding_0402.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+ul.no-bullets {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
+  }
