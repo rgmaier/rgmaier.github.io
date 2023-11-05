@@ -107,7 +107,7 @@ function updateMonthStatus(){
 
 function enableSubmitButton(){
     var contents = JSON.parse(sessionStorage.getItem('contents'));
-    if(content != null){
+    if(contents != null){
         if(Object.keys(contents).length==12){
             var completed = true;
             for(key in contents){
