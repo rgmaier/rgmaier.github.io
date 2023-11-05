@@ -107,19 +107,22 @@ function updateMonthStatus(){
 
 function enableSubmitButton(){
     var contents = JSON.parse(sessionStorage.getItem('contents'));
-    if(Object.keys(contents).length==12){
-        var completed = true;
-        for(key in contents){
-            if(contents[key]['message'].length == 0 || contents[key]['gift'].length == 0)
-            {
-                completed = false;
+    if(content != null){
+        if(Object.keys(contents).length==12){
+            var completed = true;
+            for(key in contents){
+                if(contents[key]['message'].length == 0 || contents[key]['gift'].length == 0)
+                {
+                    completed = false;
+                }
+            }
+    
+            if(completed){
+                $('#submitContent').removeAttr('disabled');
             }
         }
-
-        if(completed){
-            $('#submitContent').removeAttr('disabled');
-        }
     }
+    
    
 }
 
