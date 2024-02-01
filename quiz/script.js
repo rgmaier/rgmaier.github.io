@@ -193,6 +193,7 @@ $(document).ready(function(){
         } else {
             $("#main").addClass("d-none");
             $("#game").addClass("d-none");
+            $('#points').text(localStorage.getItem('points'));
             $("#end").removeClass("d-none");
             shareWith();
         }
