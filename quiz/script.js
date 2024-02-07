@@ -129,11 +129,33 @@ function lastPlayedToday(){
         localStorage.setItem('lastPlayed', lastPlayed);
         localStorage.setItem('qAnswered', 0);
         localStorage.setItem('points', 0);
+        localStorage.setItem('results', '');
     }
 }
 
+//A function that adds ❌ to the local storage variable results if the answer was wrong and ✅ if the answer was correct
+function updateResults(isCorrect) {
+    // Get the current results from local storage
+    var results = localStorage.getItem('results');
+
+    // If results is null, initialize it to an empty string
+    if (results === null) {
+        results = '';
+    }
+
+    // Add the appropriate emoji to the results
+    if (isCorrect) {
+        results += '✅';
+    } else {
+        results += '❌';
+    }
+
+    // Save the updated results back to local storage
+    localStorage.setItem('results', results);
+}
+
 function shareWith(){
-    var shareText = "I just scored "+localStorage.getItem('points')+" out of 7 points in today's #RxOrPoke quiz! Can you beat me? https://rgmaier.github.io/quiz/";
+    var shareText = localStorage.getItem('results')+" - I scored "+localStorage.getItem('points')+" out of 7 points in today's #RxOrPoke quiz! Can you beat me? https://rgmaier.github.io/quiz/";
     var encodedShareText = encodeURIComponent(shareText);
 
     var whatsappLink = "https://api.whatsapp.com/send?text="+encodedShareText;
@@ -160,10 +182,12 @@ $(document).ready(function(){
         $('#game').addClass("d-none");
         if(!isRx(gameData)){
             addResult(true);
+            updateResults(true);
             addPokeInfo(gameData);
             increasePoints();
         } else{
             addResult(false);
+            updateResults(false);
             addRxInfo(gameData);
         }
         increaseQAnswered();
@@ -174,10 +198,12 @@ $(document).ready(function(){
         $('#game').addClass("d-none");
         if(isRx(gameData)){
             addResult(true);
+            updateResults(true);
             addRxInfo(gameData);
             increasePoints();
         } else {
             addResult(false);
+            updateResults(false);
             addPokeInfo(gameData);
         }
         increaseQAnswered();
